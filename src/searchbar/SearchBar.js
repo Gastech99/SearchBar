@@ -20,7 +20,8 @@ function SearchBar() {
         </div>
         <ul>
             {
-                data.map((element, index) => <li key={index}>{element}</li>)
+                data.filter((element) => element.includes(value))
+                .map((element, index) => <li key={index}>{element}</li>)
             }
         </ul>
     </div>
